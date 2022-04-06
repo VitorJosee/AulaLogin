@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h1>Tela de Login</h1>
+    <form method="post" action="/Login/Entrar">
+
+        Usuário:<br> <input type="text" name="Usuario" />
+        <br>
+        Senha: <br> <input type="password" name="Senha" />
+
+        <br> <button type="submit">Login</button>
+
+    </form>
+}
+@if(TempData["erro"]!= null)
+            {
+                <h1>@TempData["erro"]</h1>
+            }
